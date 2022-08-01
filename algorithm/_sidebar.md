@@ -22,5 +22,8 @@
   * [找到字符串中所有字母异位词](algorithm/sliding_window/FindAnagrams)
 * [**链表**](algorithm/linked_list/linked_list)
   * [反转链表](algorithm/linked_list/ReverseList)
+  * [合并两个有序链表](algorithm/linked_list/MergeTwoLists)
+  * [删除链表的倒数第N个节点](algorithm/linked_list/RemoveNthFromEnd)
+* [**哈希表**](algorithm/hash_table/hash_table)
   * 
 

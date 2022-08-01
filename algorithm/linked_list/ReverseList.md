@@ -75,5 +75,74 @@ n1 → n2 → …→nk−1 →nk → nk+1 ←…← nm
 nk+1.next = nk 
 
 ```java
+public class ReverseList {
+
+    //递归
+    public static ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null){
+            return head;
+        }
+
+        ListNode resHead = head.next;
+        ListNode reverseList = reverseList(resHead);
+
+        resHead.next = head;
+        head.next = null;
+
+        return reverseList;
+    }
+
+    //迭代
+    public static ListNode reverseList2(ListNode head) {
+
+        //定义两个指针
+        ListNode curr = head;
+        ListNode prev = null;
+
+        while (curr != null){
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+
+        return prev;
+
+    }
+
+
+    public static void main(String[] args) {
+
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(3);
+        ListNode l4 = new ListNode(4);
+        ListNode l5 = new ListNode(5);
+
+        l1.next = l2;
+        l2.next = l3;
+        l3.next = l4;
+        l4.next = l5;
+        l5.next = null;
+
+        ListNode listNode = reverseList(l1);
+        TestLinkedList.printListNode(listNode);
+
+    }
+
+  //  public class ListNode {
+  //      int val;
+  //      ListNode next;
+  //      ListNode() {
+  //
+  //      }
+  //      ListNode(int val) {
+  //          this.val = val;
+  //      }
+  //      ListNode(int val, ListNode next) {
+  //          this.val = val; this.next = next;
+  //      }
+  //}
+}
 ```
 
