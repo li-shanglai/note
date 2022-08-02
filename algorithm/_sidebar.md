@@ -28,6 +28,6 @@
   * [只出现一次的数字](algorithm/hash_table/SingleNumber)
   * [最长连续序列](algorithm/hash_table/LongestConsecutive)
   * [LRU缓存机制](algorithm/hash_table/LRUCache)
-* [**栈和队列**]()
+* [**栈和队列**](algorithm/stack_queue/stack_queue)
   * []()
 
